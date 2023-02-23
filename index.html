@@ -22,8 +22,8 @@
           <p>10% off 1st purchase + Free shipping over Rs 999. | Download</p>
         </div>
 
-        <div class="row w-100 h-100 align-items-center header-content">
-          <div class="col-5">
+        <div class="row w-100 align-items-center header-content">
+          <div class="col-5 order-lg-0 order-1">
             <div class="nav-menu">
               <ul class="nav-list">
                 <li class="nav-item">
@@ -46,12 +46,12 @@
             </div>
           </div>
 
-          <div class="col-2">
+          <div class="col-2 order-lg-1 order-0">
             <a href="#" class="nav-logo">
               <img src="./img/logo.png" alt="" />
             </a>
           </div>
-          <div class="col-5">
+          <div class="col-5 order-lg-2 order-2">
             <div class="nav-btns">
               <!-- Theme change btns -->
               <!-- <i class="bx bx-moon change-theme" id="theme-button"></i> -->
@@ -229,7 +229,7 @@
       <section class="service" id="service">
         <div class="container service-container">
           <div class="row">
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 col-12">
               <div class="service-item">
                 <div class="service-icon">
                   <img
@@ -247,7 +247,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 col-12">
               <div class="service-item">
                 <div class="service-icon">
                   <img
@@ -265,7 +265,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 col-12">
               <div class="service-item">
                 <div class="service-icon">
                   <img
@@ -283,7 +283,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 col-12">
               <div class="service-item">
                 <div class="service-icon">
                   <img
@@ -312,8 +312,9 @@
           <p>SHOP BY CATEGORIES</p>
           <h1>Let's make magic</h1>
         </div>
-        <!-- TABS -->
+        <!-- CONTENT -->
         <div class="pd-container container">
+          <!-- TABS -->
           <ul class="nav nav-pills" id="pd-tabs" role="tablist">
             <li class="nav-item" role="presentation">
               <button
@@ -340,12 +341,13 @@
                 class="nav-link"
                 id="newarrival-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#newarrival-content"
+                data-bs-target="#newpd-content"
               >
                 New products
               </button>
             </li>
           </ul>
+
           <div class="tab-content" id="pd-tabs-content">
             <!-- FEATURED -->
             <div
@@ -355,7 +357,7 @@
             >
               <div class="pd-content row">
                 <!-- ITEM1 -->
-                <div class="col-xl-3 col-md-6">
+                <div class="col-lg-3 col-sm-6 col-12">
                   <div class="pd-item">
                     <img
                       src="./img/pd-1.png"
@@ -372,12 +374,28 @@
                         class="pd-hover-img"
                         s
                       />
-                      <a href="#" class="pd-hover-view">
-                        <i class="fa-regular fa-eye"></i>
-                      </a>
-                      <a href="#" class="pd-hover-like">
-                        <i class="fa-regular fa-heart"></i>
-                      </a>
+                      <ul class="pd-hover-btns">
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-heart"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shuffle"></i>
+                          </a>
+                        </li>
+                      </ul>
                       <ul class="pd-item-rating">
                         <li><i class="fa-solid fa-star star"></i></li>
                         <li><i class="fa-solid fa-star star"></i></li>
@@ -389,7 +407,7 @@
                   </div>
                 </div>
                 <!-- ITEM2 -->
-                <div class="col-xl-3 col-md-6">
+                <div class="col-lg-3 col-sm-6 col-12">
                   <div class="pd-item">
                     <img
                       src="./img/pd-2.png"
@@ -397,8 +415,18 @@
                       class="pd-item-img"
                     />
 
-                    <h4 class="pd-title">18k Rose Gold Diamond Plated Ring</h4>
-                    <p class="pd-price">$450.00 - $590.00</p>
+                    <div class="pd-tag">sale!</div>
+                    <div class="flash-deal-timer">
+                      <div class="days"></div>
+                      <div class="hours"></div>
+                      <div class="minutes"></div>
+                      <div class="seconds focus"></div>
+                    </div>
+
+                    <h4 class="pd-title">The Loving Heart Pendant</h4>
+                    <p class="pd-price" id="sale">
+                      <span>$850.00</span> $650.00
+                    </p>
                     <div class="pd-hover">
                       <img
                         src="./img/pd-hover-2.png"
@@ -406,12 +434,796 @@
                         class="pd-hover-img"
                         s
                       />
-                      <a href="#" class="pd-hover-view">
-                        <i class="fa-regular fa-eye"></i>
-                      </a>
-                      <a href="#" class="pd-hover-like">
-                        <i class="fa-regular fa-heart"></i>
-                      </a>
+                      <div class="pd-tag pd-tag-hover">-24%</div>
+
+                      <ul class="pd-hover-btns">
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-heart"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shuffle"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <ul class="pd-item-rating">
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM3 -->
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="pd-item">
+                    <img
+                      src="./img/pd-3.png"
+                      alt="product"
+                      class="pd-item-img"
+                    />
+
+                    <h4 class="pd-title">Dangler Brass Hoop Earring</h4>
+                    <p class="pd-price">$350.00</p>
+                    <div class="pd-hover">
+                      <img
+                        src="./img/pd-hover-3.png"
+                        alt="pd hover"
+                        class="pd-hover-img"
+                        s
+                      />
+                      <ul class="pd-hover-btns">
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-heart"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shuffle"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <ul class="pd-item-rating">
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM4 -->
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="pd-item">
+                    <img
+                      src="./img/pd-4.png"
+                      alt="product"
+                      class="pd-item-img"
+                    />
+
+                    <div class="pd-tag">sale!</div>
+                    <div class="flash-deal-timer">
+                      <div class="days"></div>
+                      <div class="hours"></div>
+                      <div class="minutes"></div>
+                      <div class="seconds focus"></div>
+                    </div>
+
+                    <h4 class="pd-title">The Mariatte Hoop Earrings</h4>
+                    <p class="pd-price" id="sale">
+                      <span>$250.00</span> $200.00
+                    </p>
+                    <div class="pd-hover">
+                      <img
+                        src="./img/pd-hover-4.png"
+                        alt="pd hover"
+                        class="pd-hover-img"
+                        s
+                      />
+                      <div class="pd-tag pd-tag-hover">-20%</div>
+
+                      <ul class="pd-hover-btns">
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-heart"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shuffle"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <ul class="pd-item-rating">
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM5 -->
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="pd-item">
+                    <img
+                      src="./img/pd-5.png"
+                      alt="product"
+                      class="pd-item-img"
+                    />
+
+                    <h4 class="pd-title">
+                      Melorra The Blind Fold Diamond Earrings
+                    </h4>
+                    <p class="pd-price">$151.00 - $750.00</p>
+                    <div class="pd-hover">
+                      <img
+                        src="./img/pd-hover-5.png"
+                        alt="pd hover"
+                        class="pd-hover-img"
+                        s
+                      />
+                      <ul class="pd-hover-btns">
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-heart"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shuffle"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <ul class="pd-item-rating">
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM6 -->
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="pd-item">
+                    <img
+                      src="./img/pd-6.png"
+                      alt="product"
+                      class="pd-item-img"
+                    />
+
+                    <h4 class="pd-title">Amethyst Ring For Girls and Women</h4>
+                    <p class="pd-price">$180.00</p>
+                    <div class="pd-hover">
+                      <img
+                        src="./img/pd-hover-6.png"
+                        alt="pd hover"
+                        class="pd-hover-img"
+                        s
+                      />
+                      <ul class="pd-hover-btns">
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-heart"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shuffle"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <ul class="pd-item-rating">
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM7 -->
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="pd-item">
+                    <img
+                      src="./img/pd-7.png"
+                      alt="product"
+                      class="pd-item-img"
+                    />
+
+                    <h4 class="pd-title">18kt Diamond Rose Gold ring</h4>
+                    <p class="pd-price">$301.00</p>
+                    <div class="pd-hover">
+                      <img
+                        src="./img/pd-hover-7.png"
+                        alt="pd hover"
+                        class="pd-hover-img"
+                        s
+                      />
+                      <ul class="pd-hover-btns">
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-heart"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shuffle"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <ul class="pd-item-rating">
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM8 -->
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="pd-item">
+                    <img
+                      src="./img/pd-8.png"
+                      alt="product"
+                      class="pd-item-img"
+                    />
+
+                    <h4 class="pd-title">Drop Earrings for Women</h4>
+                    <p class="pd-price">$450.00 - $500.00</p>
+                    <div class="pd-hover">
+                      <img
+                        src="./img/pd-hover-8.png"
+                        alt="pd hover"
+                        class="pd-hover-img"
+                        s
+                      />
+                      <ul class="pd-hover-btns">
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-heart"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shuffle"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <ul class="pd-item-rating">
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BEST SELLER -->
+            <div class="tab-pane fade" id="bestseller-content" role="tabpanel">
+              <div class="pd-content row">
+                <!-- ITEM2 -->
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="pd-item">
+                    <img
+                      src="./img/pd-2.png"
+                      alt="product"
+                      class="pd-item-img"
+                    />
+
+                    <div class="pd-tag">sale!</div>
+                    <div class="flash-deal-timer">
+                      <div class="days"></div>
+                      <div class="hours"></div>
+                      <div class="minutes"></div>
+                      <div class="seconds focus"></div>
+                    </div>
+
+                    <h4 class="pd-title">The Loving Heart Pendant</h4>
+                    <p class="pd-price" id="sale">
+                      <span>$850.00</span> $650.00
+                    </p>
+                    <div class="pd-hover">
+                      <img
+                        src="./img/pd-hover-2.png"
+                        alt="pd hover"
+                        class="pd-hover-img"
+                        s
+                      />
+                      <div class="pd-tag pd-tag-hover">-24%</div>
+
+                      <ul class="pd-hover-btns">
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-heart"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shuffle"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <ul class="pd-item-rating">
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM3 -->
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="pd-item">
+                    <img
+                      src="./img/pd-3.png"
+                      alt="product"
+                      class="pd-item-img"
+                    />
+
+                    <h4 class="pd-title">Dangler Brass Hoop Earring</h4>
+                    <p class="pd-price">$350.00</p>
+                    <div class="pd-hover">
+                      <img
+                        src="./img/pd-hover-3.png"
+                        alt="pd hover"
+                        class="pd-hover-img"
+                        s
+                      />
+                      <ul class="pd-hover-btns">
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-heart"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shuffle"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <ul class="pd-item-rating">
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM4 -->
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="pd-item">
+                    <img
+                      src="./img/pd-4.png"
+                      alt="product"
+                      class="pd-item-img"
+                    />
+
+                    <div class="pd-tag">sale!</div>
+                    <div class="flash-deal-timer">
+                      <div class="days"></div>
+                      <div class="hours"></div>
+                      <div class="minutes"></div>
+                      <div class="seconds focus"></div>
+                    </div>
+
+                    <h4 class="pd-title">The Mariatte Hoop Earrings</h4>
+                    <p class="pd-price" id="sale">
+                      <span>$250.00</span> $200.00
+                    </p>
+                    <div class="pd-hover">
+                      <img
+                        src="./img/pd-hover-4.png"
+                        alt="pd hover"
+                        class="pd-hover-img"
+                        s
+                      />
+                      <div class="pd-tag pd-tag-hover">-20%</div>
+
+                      <ul class="pd-hover-btns">
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-heart"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shuffle"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <ul class="pd-item-rating">
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM5 -->
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="pd-item">
+                    <img
+                      src="./img/pd-5.png"
+                      alt="product"
+                      class="pd-item-img"
+                    />
+
+                    <h4 class="pd-title">
+                      Melorra The Blind Fold Diamond Earrings
+                    </h4>
+                    <p class="pd-price">$151.00 - $750.00</p>
+                    <div class="pd-hover">
+                      <img
+                        src="./img/pd-hover-5.png"
+                        alt="pd hover"
+                        class="pd-hover-img"
+                        s
+                      />
+                      <ul class="pd-hover-btns">
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-heart"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shuffle"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <ul class="pd-item-rating">
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- NEW PRODUCTS -->
+            <div class="tab-pane fade" id="newpd-content" role="tabpanel">
+              <div class="pd-content row">
+                <!-- ITEM3 -->
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="pd-item">
+                    <img
+                      src="./img/pd-3.png"
+                      alt="product"
+                      class="pd-item-img"
+                    />
+
+                    <h4 class="pd-title">Dangler Brass Hoop Earring</h4>
+                    <p class="pd-price">$350.00</p>
+                    <div class="pd-hover">
+                      <img
+                        src="./img/pd-hover-3.png"
+                        alt="pd hover"
+                        class="pd-hover-img"
+                        s
+                      />
+                      <ul class="pd-hover-btns">
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-heart"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shuffle"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <ul class="pd-item-rating">
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM4 -->
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="pd-item">
+                    <img
+                      src="./img/pd-4.png"
+                      alt="product"
+                      class="pd-item-img"
+                    />
+
+                    <div class="pd-tag">sale!</div>
+                    <div class="flash-deal-timer">
+                      <div class="days"></div>
+                      <div class="hours"></div>
+                      <div class="minutes"></div>
+                      <div class="seconds focus"></div>
+                    </div>
+
+                    <h4 class="pd-title">The Mariatte Hoop Earrings</h4>
+                    <p class="pd-price" id="sale">
+                      <span>$250.00</span> $200.00
+                    </p>
+                    <div class="pd-hover">
+                      <img
+                        src="./img/pd-hover-4.png"
+                        alt="pd hover"
+                        class="pd-hover-img"
+                        s
+                      />
+                      <div class="pd-tag pd-tag-hover">-20%</div>
+
+                      <ul class="pd-hover-btns">
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-heart"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shuffle"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <ul class="pd-item-rating">
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM5 -->
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="pd-item">
+                    <img
+                      src="./img/pd-5.png"
+                      alt="product"
+                      class="pd-item-img"
+                    />
+
+                    <h4 class="pd-title">
+                      Melorra The Blind Fold Diamond Earrings
+                    </h4>
+                    <p class="pd-price">$151.00 - $750.00</p>
+                    <div class="pd-hover">
+                      <img
+                        src="./img/pd-hover-5.png"
+                        alt="pd hover"
+                        class="pd-hover-img"
+                        s
+                      />
+                      <ul class="pd-hover-btns">
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-heart"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shuffle"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <ul class="pd-item-rating">
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM6 -->
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="pd-item">
+                    <img
+                      src="./img/pd-6.png"
+                      alt="product"
+                      class="pd-item-img"
+                    />
+
+                    <h4 class="pd-title">Amethyst Ring For Girls and Women</h4>
+                    <p class="pd-price">$180.00</p>
+                    <div class="pd-hover">
+                      <img
+                        src="./img/pd-hover-6.png"
+                        alt="pd hover"
+                        class="pd-hover-img"
+                        s
+                      />
+                      <ul class="pd-hover-btns">
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-heart"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="pd-hover-btn">
+                            <i class="bx bx-shuffle"></i>
+                          </a>
+                        </li>
+                      </ul>
                       <ul class="pd-item-rating">
                         <li><i class="fa-solid fa-star star"></i></li>
                         <li><i class="fa-solid fa-star star"></i></li>
@@ -427,6 +1239,177 @@
           </div>
         </div>
       </section>
+
+      <!-- BIG BANNER -->
+      <section class="big-banner" id="big-banner">
+        <div class="container-fluid big-banner-container">
+          <div class="big-banner-content">
+            <p class="big-banner-subtitle">DISCOVER STYLISH COLLECTION</p>
+            <h2 class="big-banner-title">
+              We Design Elegant, Stylist Fashion <br />
+              Collection. Choose Your Style!
+            </h2>
+            <a href="#" class="button big-banner-button">View More</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIAL -->
+      <section class="testimonial" id="testimonial">
+        <div class="container testimonial-container">
+          <div class="row align-items-center">
+            <div class="col-md-4">
+              <div class="testimonial-description">
+                <p class="testimonial-subtitle">TESTIMONIAL</p>
+                <h1 class="testimonial-title">
+                  What our clients say about us?
+                </h1>
+                <a href="#" class="button testimonial-button">About us</a>
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="swiper testimonial-content">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide testimonial-item">
+                    <i class="bx bxs-quote-alt-left"></i>
+                    <p class="testimonial-text">
+                      These are great quality eye glasses and I love how you can
+                      choose the lens power for each eye. I searched the
+                      internet for a while and this is the only company I found
+                      that did that.
+                    </p>
+                    <div class="testimonial-avatar">
+                      <img
+                        src="./img/testimonial-1.png"
+                        alt=""
+                        class="testimonial-img"
+                      />
+                      <div class="testimonial-info">
+                        <h4 class="testimonial-name">Leah Jonas</h4>
+                        <p class="testimonial-job">Accountant</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide testimonial-item">
+                    <i class="bx bxs-quote-alt-left"></i>
+                    <p class="testimonial-text">
+                      These are great quality eye glasses and I love how you can
+                      choose the lens power for each eye. I searched the
+                      internet for a while and this is the only company I found
+                      that did that.
+                    </p>
+                    <div class="testimonial-avatar">
+                      <img
+                        src="./img/testimonial-2.png"
+                        alt=""
+                        class="testimonial-img"
+                      />
+                      <div class="testimonial-info">
+                        <h4 class="testimonial-name">Elana B. Texas</h4>
+                        <p class="testimonial-job">Fashion designer</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide testimonial-item">
+                    <i class="bx bxs-quote-alt-left"></i>
+                    <p class="testimonial-text">
+                      These are great quality eye glasses and I love how you can
+                      choose the lens power for each eye. I searched the
+                      internet for a while and this is the only company I found
+                      that did that.
+                    </p>
+                    <div class="testimonial-avatar">
+                      <img
+                        src="./img/testimonial-3.png"
+                        alt=""
+                        class="testimonial-img"
+                      />
+                      <div class="testimonial-info">
+                        <h4 class="testimonial-name">Denise Boston</h4>
+                        <p class="testimonial-job">Developer</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOG -->
+      <section class="blog" id="blog">
+        <!-- TITLE -->
+        <div class="section-title">
+          <p>OUR BLOG</p>
+          <h1>Our Latest News!</h1>
+        </div>
+        <!-- CONTENT -->
+        <div class="container blog-container">
+          <div class="swiper blog-content">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide blog-item">
+                <div class="blog-img">
+                  <img src="./img/blog-1.png" alt="" />
+                </div>
+                <h4 class="blog-title">
+                  A beautiful sunday morning lorem make finibus bonorum
+                  renaissance
+                </h4>
+                <p class="blog-desc">
+                  You’re only as good as your last collection, which is an
+                  enormous pressure. I think there is
+                </p>
+              </div>
+              <div class="swiper-slide blog-item">
+                <div class="blog-img">
+                  <img src="./img/blog-2.png" alt="" />
+                </div>
+                <h4 class="blog-title">
+                  Risus retium tortor metus fringilla nullam classical
+                  literature
+                </h4>
+                <p class="blog-desc">
+                  You’re only as good as your last collection, which is an
+                  enormous pressure. I think there is
+                </p>
+              </div>
+
+              <div class="swiper-slide blog-item">
+                <div class="blog-img">
+                  <img src="./img/blog-3.png" alt="" />
+                </div>
+                <h4 class="blog-title">
+                  Urna pretium elit mauris cursus curabitu letraset sheets
+                  spectacles
+                </h4>
+                <p class="blog-desc">
+                  You’re only as good as your last collection, which is an
+                  enormous pressure. I think there is
+                </p>
+              </div>
+
+              <div class="swiper-slide blog-item">
+                <div class="blog-img">
+                  <img src="./img/blog-4.png" alt="" />
+                </div>
+                <h4 class="blog-title">
+                  Vitae magnis fusce laoreet porttitor hampden sydney literature
+                </h4>
+                <p class="blog-desc">
+                  You’re only as good as your last collection, which is an
+                  enormous pressure. I think there is
+                </p>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!--=============== JQUERY JS ===============-->
@@ -438,5 +1421,48 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="./js/main.js"></script>
+
+    <script>
+      let swiper = new Swiper(".testimonial-content", {
+        spaceBetween: 24,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        loop: "true",
+
+        breakpoints: {
+          576: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 1,
+          },
+          992: {
+            slidesPerView: 2,
+          },
+        },
+      });
+      let swiper2 = new Swiper(".blog-content", {
+        spaceBetween: 24,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        loop: "true",
+
+        breakpoints: {
+          576: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
