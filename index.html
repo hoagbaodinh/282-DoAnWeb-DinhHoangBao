@@ -16,6 +16,7 @@
     <title>Goldish</title>
   </head>
   <body>
+    <!-- HEADER -->
     <header class="header" id="header">
       <div class="container-fluid">
         <div class="header-top">
@@ -71,6 +72,7 @@
         </div>
       </div>
     </header>
+    <!-- CART -->
     <div class="cart" id="cart">
       <i class="bx bx-x cart__close" id="cart-close"></i>
 
@@ -1412,6 +1414,52 @@
       </section>
     </main>
 
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+      <div class="container footer-container">
+        <div class="row footer-content">
+          <div class="col-lg-4">
+            <div class="footer-item">
+              <div class="footer-logo">
+                <img src="./img/logo-invert.png" alt="" class="footer-img" />
+              </div>
+              <div class="footer-contact">
+                <div class="row mb-5">
+                  <div class="col-12 d-flex align-items-center mb-2">
+                    <a href="#" class="contact-icon">
+                      <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <div>
+                      <h4>Email</h4>
+                      <span>info@gmail.com</span>
+                    </div>
+                  </div>
+                  <div class="col-12 d-flex align-items-center mb-2">
+                    <a href="#" class="contact-icon">
+                      <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <div>
+                      <h4>Call Us</h4>
+                      <span>+91 123456789</span>
+                    </div>
+                  </div>
+                  <div class="col-12 d-flex align-items-center mb-2">
+                    <a href="#" class="contact-icon">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </a>
+                    <div>
+                      <h4>Address</h4>
+                      <span>4005, Silver business point India</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <!--=============== JQUERY JS ===============-->
     <script src="./js/jquery-3.6.1.min.js"></script>
     <!--=============== BOOTSTRAP JS ===============-->
@@ -1425,10 +1473,7 @@
     <script>
       let swiper = new Swiper(".testimonial-content", {
         spaceBetween: 24,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
+
         loop: "true",
 
         breakpoints: {
@@ -1445,10 +1490,11 @@
       });
       let swiper2 = new Swiper(".blog-content", {
         spaceBetween: 24,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
+        // effect: "fade",
         loop: "true",
 
         breakpoints: {

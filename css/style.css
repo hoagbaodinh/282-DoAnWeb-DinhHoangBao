@@ -693,6 +693,54 @@ body {
 .blog-desc {
   font-size: var(--small-font-size);
 }
+
+.blog-content .swiper-button-next,
+.blog-content .swiper-button-prev {
+  width: 35px;
+  height: 35px;
+  color: var(--title-color);
+  background-color: var(--container-color);
+  opacity: 0;
+  transition: 0.3s;
+}
+.blog-content .swiper-button-next::after,
+.blog-content .swiper-button-prev::after {
+  font-size: 12px;
+}
+.blog-content .swiper-button-next {
+  right: 4px;
+}
+.blog-content .swiper-button-prev {
+  left: 4px;
+}
+
+.blog-content:hover .swiper-button-next,
+.blog-content:hover .swiper-button-prev {
+  opacity: 1;
+  transition: 0.3s;
+}
+/*=============== FOOTER ===============*/
+.footer {
+  background-color: #101010;
+  padding-top: 100px;
+  color: var(--container-color-alt);
+}
+.footer-item {
+  display: flex;
+  flex-direction: column;
+}
+.footer-logo {
+  height: 70px;
+}
+.footer-contact h4 {
+  color: var(--container-color-alt);
+  font-size: 20px;
+}
+
+.contact-icon {
+  font-size: 20px;
+  padding-right: 15px;
+}
 /*=============== RESPONSIVE ===============*/
 @media screen and (max-width: 1400px) {
 }
@@ -846,6 +894,7 @@ body {
   .caption-subtitle,
   .carousel-caption .button {
     font-size: 13px;
+    padding: 5px 10px;
   }
   .caption-title {
     font-size: 22px;
@@ -877,5 +926,8 @@ body {
   }
   .big-banner-container {
     height: 250px;
+  }
+  .blog-content {
+    padding: 50px;
   }
 }
