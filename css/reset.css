@@ -64,27 +64,32 @@ audio,
 video,
 details,
 summary {
-  margin: 0;
-  padding: 0;
-  border: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
 
-  background: transparent;
+	background: transparent;
 }
 
 ul,
 ol {
-  list-style: none;
+	list-style: none;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 button {
-  outline: none;
-  border: none;
+	outline: none;
+	border: none;
+}
+input,
+button {
+	outline: none;
+	border: none;
 }
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
