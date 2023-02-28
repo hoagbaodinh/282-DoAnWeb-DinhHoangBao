@@ -69,3 +69,23 @@ function makeTimer() {
 setInterval(function () {
   makeTimer();
 }, 1000);
+
+/*=============== SHOW ACCORDION ===============*/
+const accBtns = document.querySelectorAll(".accordion-btn"),
+  accList = document.querySelectorAll(".footer-menu");
+
+accBtns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    accList[index].classList.toggle("show-accordion");
+    btn.classList.toggle("accordion-active");
+  });
+});
+
+/*=============== SHOW SCROLL UP ===============*/
+const scrollUp = () => {
+  const scrollUp = document.getElementById("scroll-up");
+
+  if (this.scrollY >= 500) scrollUp.classList.add("show-scrollup");
+  else scrollUp.classList.remove("show-scrollup");
+};
+window.addEventListener("scroll", scrollUp);
