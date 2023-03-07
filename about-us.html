@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Goldish</title>
+    <title>About Us</title>
   </head>
   <body>
     <!-- HEADER -->
@@ -28,7 +28,7 @@
             <nav class="nav-menu">
               <ul class="nav-list">
                 <li class="nav-item">
-                  <a href="#home" class="nav-link">Home </a>
+                  <a href="index.html" class="nav-link">Home </a>
                 </li>
                 <li class="nav-item">
                   <a href="#featured" class="nav-link">Featured</a>
@@ -206,19 +206,131 @@
           </li>
 
           <li class="breadcrumb-item">
-            <a href="#" class="breadcrumb-link">Shop</a>
-          </li>
-
-          <li class="breadcrumb-item">
-            <a href="#" class="breadcrumb-link">Golden Rings</a>
-          </li>
-
-          <li class="breadcrumb-item">
-            <a href="#" class="breadcrumb-link selected"
-              >18k Rose Gold Diamond Plated Ring</a
-            >
+            <a href="#" class="breadcrumb-link selected">About us</a>
           </li>
         </ul>
+      </section>
+
+      <section class="about-us">
+        <div class="container about-us-container">
+          <div class="row about-us-content">
+            <div class="col-md-5">
+              <div class="about-us-item">
+                <h2 class="about-us-title">About our store</h2>
+                <p class="about-us-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod temp or incididunt ut labore et dolore magna aliqua
+                </p>
+                <span class="about-us-author">JONSHAN D.</span>
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-6">
+              <div class="about-us-image-slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="./img/about-us-slider-1.png"
+                      alt=""
+                      class="about-us-slider-img"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./img/about-us-slider-2.png"
+                      alt=""
+                      class="about-us-slider-img"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./img/about-us-slider-3.png"
+                      alt=""
+                      class="about-us-slider-img"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+            <!-- ====== -->
+            <div class="col-md-6">
+              <div class="about-us-img">
+                <img src="./img/about-us-1.png" alt="" />
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+              <div class="about-us-item">
+                <h2 class="about-us-title">Who we are</h2>
+                <p class="about-us-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod temp or incididunt ut labore et dolore magna
+                  aliqua.Duis aute irure dolor in reprehen derit in voluptate
+                  velit esse cillumdolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+            </div>
+            <!-- ====== -->
+            <div class="col-md-5">
+              <div class="about-us-item">
+                <h2 class="about-us-title">Our story</h2>
+                <p class="about-us-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod temp or incididunt ut labore et dolore magna aliqua
+                </p>
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-6">
+              <div class="about-us-img">
+                <img src="./img/about-us-2.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="achievement">
+        <div class="container achievement-container">
+          <div class="row achievement-content">
+            <div class="col-md-6">
+              <div class="achievement-desc">
+                <h2 class="achievement-title">
+                  We work <br />
+                  with planning
+                </h2>
+
+                <p class="achievement-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod temp or incididunt ut labore et dolore magna aliqua
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="achievement-data">
+                <div class="achievement-data-item">
+                  <div class="achievement-data-number">50</div>
+                  <div class="achievement-data-name">Hours per week</div>
+                </div>
+                <div class="achievement-data-item">
+                  <div class="achievement-data-number">15,102</div>
+                  <div class="achievement-data-name">Line of code</div>
+                </div>
+                <div class="achievement-data-item">
+                  <div class="achievement-data-number">250</div>
+                  <div class="achievement-data-name">Projects completed</div>
+                </div>
+                <div class="achievement-data-item">
+                  <div class="achievement-data-number gold">550</div>
+                  <div class="achievement-data-name">Awards</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -368,5 +480,18 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="./js/main.js"></script>
+
+    <script>
+      let swiper = new Swiper(".about-us-image-slider", {
+        slidesPerView: 1,
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+        spaceBetween: 24,
+      });
+    </script>
   </body>
 </html>

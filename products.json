@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "18k Rose Gold Diamond Plated Ring",
+        "price": 590.99,
+        "image": { "fields": { "file": { "url": "./img/pd-1.png" },"hover": { "url": "./img/pd-hover-1.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "The Loving Heart Pendant",
+        "price": 650.99,
+        "image": { "fields": { "file": { "url": "./img/pd-2.png" },"hover": { "url": "./img/pd-hover-2.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "Dangler Brass Hoop Earring",
+        "price": 350.99,
+        "image": { "fields": { "file": { "url": "./img/pd-3.png" },"hover": { "url": "./img/pd-hover-3.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "The Mariatte Hoop Earrings",
+        "price": 200.99,
+        "image": { "fields": { "file": { "url": "./img/pd-4.png" },"hover": { "url": "./img/pd-hover-4.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "Melorra The Blind Fold Diamond Earrings",
+        "price": 750.99,
+        "image": { "fields": { "file": { "url": "./img/pd-5.png" },"hover": { "url": "./img/pd-hover-5.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "title": "Amethyst Ring For Girls and Women",
+        "price": 180.99,
+        "image": { "fields": { "file": { "url": "./img/pd-6.png" },"hover": { "url": "./img/pd-hover-6.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "title": "18k Diamond Rose Gold ring",
+        "price": 301.99,
+        "image": { "fields": { "file": { "url": "./img/pd-7.png" },"hover": { "url": "./img/pd-hover-7.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "Drop Earrings for Women",
+        "price": 500.99,
+        "image": { "fields": { "file": { "url": "./img/pd-8.png" },"hover": { "url": "./img/pd-hover-8.png" } } }
+      }
+    }
+  ]
+}

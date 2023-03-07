@@ -1,14 +1,3 @@
-// SHOW CART
-const cart = document.getElementById("cart");
-const cartToggle = document.getElementById("cart-shop");
-const cartClose = document.getElementById("cart-close");
-
-cartToggle.addEventListener("click", () => {
-  cart.classList.add("show-cart");
-});
-cartClose.addEventListener("click", () => {
-  cart.classList.remove("show-cart");
-});
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 const scrollHeader = () => {
   const header = document.getElementById("header");
@@ -89,3 +78,36 @@ const scrollUp = () => {
   else scrollUp.classList.remove("show-scrollup");
 };
 window.addEventListener("scroll", scrollUp);
+
+/*=============== COUNTER ===============*/
+const plus = document.querySelector(".plus");
+const minus = document.querySelector(".minus");
+const number = document.querySelector(".quantity-input");
+
+let value = number.value;
+
+plus.addEventListener("click", () => {
+  value++;
+  number.setAttribute("value", value);
+});
+
+minus.addEventListener("click", () => {
+  if (value > 1) value--;
+  number.setAttribute("value", value);
+});
+
+/*=============== COLOR PICKED ===============*/
+const colorBtns = document.querySelectorAll(".pd-details-option-color");
+
+colorBtns.forEach((color) => {
+  color.addEventListener("click", () => {
+    for (let i = 0; i < colorBtns.length; i++) {
+      if (colorBtns[i].parentElement.classList.contains("color-picked")) {
+        colorBtns[i].parentElement.classList.remove("color-picked");
+      }
+    }
+    color.parentElement.classList.toggle("color-picked");
+  });
+});
+
+/*=============== RENDER PRODUCT ===============*/
