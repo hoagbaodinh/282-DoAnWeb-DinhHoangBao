@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/logo-thumb.png" type="image/x-icon" />
+
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -24,23 +26,23 @@
         </div>
 
         <div class="row align-items-center header-content">
-          <div class="col-5 order-xl-0 order-1">
+          <div class="col-xl-5 col-8 order-xl-0 order-1">
             <nav class="nav-menu">
               <ul class="nav-list">
                 <li class="nav-item">
-                  <a href="#home" class="nav-link">Home </a>
+                  <a href="index.html" class="nav-link">Home </a>
                 </li>
                 <li class="nav-item">
-                  <a href="#featured" class="nav-link">Featured</a>
+                  <a href="product-ring.html" class="nav-link">Products</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#products" class="nav-link">Products</a>
+                  <a href="about-us.html" class="nav-link">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#new" class="nav-link">New</a>
+                  <a href="contact.html" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#cate" class="nav-link"
+                  <a href="category.html" class="nav-link"
                     >Categories
                     <i class="fa fa-angle-down" data-toggle="dropdown"></i>
                   </a>
@@ -67,13 +69,13 @@
 
           <div class="col-2 order-xl-1 order-0">
             <a href="index.html" class="nav-logo">
-              <img src="./img/logo.png" alt="" />
+              <!-- <img src="./img/logo.png" alt="" /> -->
             </a>
           </div>
-          <div class="col-5 order-xl-2 order-2">
+          <div class="col-xl-5 col-2 order-xl-2 order-2">
             <div class="nav-btns">
               <!-- Theme change btns -->
-              <!-- <i class="bx bx-moon change-theme" id="theme-button"></i> -->
+              <i class="bx bx-moon change-theme" id="theme-button"></i>
 
               <div class="nav-search" id="search">
                 <i class="bx bx-search"></i>
@@ -108,95 +110,19 @@
       <h2 class="cart__title-center">My Cart</h2>
 
       <div class="cart__container">
-        <article class="cart__card">
-          <div class="cart__box">
-            <img src="./img/pd-1.png" alt="" class="cart__img" />
-          </div>
-
-          <div class="cart__details">
-            <h3 class="cart__title">Jazzmaster</h3>
-            <span class="cart__price">$1050</span>
-
-            <div class="cart__amount">
-              <div class="cart__amount-content">
-                <span class="cart__amount-box">
-                  <i class="bx bx-minus"></i>
-                </span>
-
-                <span class="cart__amount-number">1</span>
-
-                <span class="cart__amount-box">
-                  <i class="bx bx-plus"></i>
-                </span>
-              </div>
-
-              <i class="bx bx-trash-alt cart__amount-trash"></i>
-            </div>
-          </div>
-        </article>
-
-        <article class="cart__card">
-          <div class="cart__box">
-            <img src="./img/pd-2.png" alt="" class="cart__img" />
-          </div>
-
-          <div class="cart__details">
-            <h3 class="cart__title">Rose Gold</h3>
-            <span class="cart__price">$850</span>
-
-            <div class="cart__amount">
-              <div class="cart__amount-content">
-                <span class="cart__amount-box">
-                  <i class="bx bx-minus"></i>
-                </span>
-
-                <span class="cart__amount-number">1</span>
-
-                <span class="cart__amount-box">
-                  <i class="bx bx-plus"></i>
-                </span>
-              </div>
-
-              <i class="bx bx-trash-alt cart__amount-trash"></i>
-            </div>
-          </div>
-        </article>
-
-        <article class="cart__card">
-          <div class="cart__box">
-            <img src="./img/pd-3.png" alt="" class="cart__img" />
-          </div>
-
-          <div class="cart__details">
-            <h3 class="cart__title">Longines Rose</h3>
-            <span class="cart__price">$980</span>
-
-            <div class="cart__amount">
-              <div class="cart__amount-content">
-                <span class="cart__amount-box">
-                  <i class="bx bx-minus"></i>
-                </span>
-
-                <span class="cart__amount-number">1</span>
-
-                <span class="cart__amount-box">
-                  <i class="bx bx-plus"></i>
-                </span>
-              </div>
-
-              <i class="bx bx-trash-alt cart__amount-trash"></i>
-            </div>
-          </div>
-        </article>
+        <!-- cart card -->
       </div>
 
       <div class="cart__prices">
-        <span class="cart__prices-item">3 items</span>
-        <span class="cart__prices-total">$2880</span>
+        <span class="cart__prices-item">Total</span>
+        <span class="cart__prices-total"
+          >$ <span class="cart-total"></span>
+        </span>
       </div>
     </div>
     <!-- MAIN -->
     <main class="main" id="main">
+      <!-- BREADCRUMB -->
       <section class="breadcrumb-container" id="breadcrumb">
         <ul class="breadcrumb">
           <li class="breadcrumb-item">
@@ -206,19 +132,102 @@
           </li>
 
           <li class="breadcrumb-item">
-            <a href="#" class="breadcrumb-link">Shop</a>
-          </li>
-
-          <li class="breadcrumb-item">
-            <a href="#" class="breadcrumb-link">Golden Rings</a>
-          </li>
-
-          <li class="breadcrumb-item">
-            <a href="#" class="breadcrumb-link selected"
-              >18k Rose Gold Diamond Plated Ring</a
-            >
+            <a href="#" class="breadcrumb-link selected">Contact</a>
           </li>
         </ul>
+      </section>
+
+      <!-- CONTENT -->
+      <section class="contact">
+        <div class="container contact-container">
+          <h4 class="contact-title">Send us a message</h4>
+          <p class="contact-subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          </p>
+
+          <div class="contact-content">
+            <div class="row">
+              <div class="col-md-6 contact-left">
+                <div class="contact-left-content">
+                  <div class="contact-item">
+                    <a href="#" class="contact-icon">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </a>
+                    <div>
+                      <h4>Address :</h4>
+                      <span>District 1, Ho Chi Minh City</span>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <a href="#" class="contact-icon">
+                      <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <div>
+                      <h4>Phone :</h4>
+                      <span>(+84)98 981 9191</span>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <a href="#" class="contact-icon">
+                      <i class="fa-solid fa-envelopes-bulk"></i>
+                    </a>
+                    <div>
+                      <h4>Email :</h4>
+                      <span>info@gmail.com</span>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <a href="#" class="contact-icon">
+                      <i class="fa-regular fa-clock"></i>
+                    </a>
+                    <div>
+                      <h4>Open / Close Time</h4>
+                      <span>8:AM - 9:PM</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 contact-right">
+                <div class="contact-right-content">
+                  <form action="" class="contact-form">
+                    <div class="contact-form-item">
+                      <p>Your Name:</p>
+                      <input type="text" />
+                    </div>
+                    <div class="contact-form-item">
+                      <p>Your Email:</p>
+                      <input type="Email" />
+                    </div>
+                    <div class="contact-form-item">
+                      <p>Subject:</p>
+                      <input type="text" />
+                    </div>
+                    <div class="contact-form-item">
+                      <p>Your message (optional)</p>
+                      <textarea cols="40" rows="10"></textarea>
+                    </div>
+                    <button class="contact-submit button black-btn">
+                      SUBMIT
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsive-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.7806761080233!2d-93.29138368446431!3d44.96844997909819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32b6ee2c87c91%3A0xc20dff2748d2bd92!2sWalker+Art+Center!5e0!3m2!1sen!2sus!4v1514524647889"
+              width="100%"
+              height="400px"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -348,9 +357,7 @@
       </div>
       <div class="container-fluid footer-bottom">
         <div class="container">
-          <p class="footer-copyright">
-            © 2023 Goldish - WordPress Theme by Webdigify
-          </p>
+          <p class="footer-copyright">© 2023 Goldish</p>
         </div>
       </div>
     </footer>
@@ -368,5 +375,6 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="./js/main.js"></script>
+    <script src="./js/products.js"></script>
   </body>
 </html>

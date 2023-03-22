@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/logo-thumb.png" type="image/x-icon" />
+
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -24,23 +26,23 @@
         </div>
 
         <div class="row align-items-center header-content">
-          <div class="col-5 order-xl-0 order-1">
+          <div class="col-xl-5 col-8 order-xl-0 order-1">
             <nav class="nav-menu">
               <ul class="nav-list">
                 <li class="nav-item">
                   <a href="index.html" class="nav-link">Home </a>
                 </li>
                 <li class="nav-item">
-                  <a href="#featured" class="nav-link">Featured</a>
+                  <a href="product-ring.html" class="nav-link">Products</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#products" class="nav-link">Products</a>
+                  <a href="about-us.html" class="nav-link">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#new" class="nav-link">New</a>
+                  <a href="contact.html" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#cate" class="nav-link"
+                  <a href="category.html" class="nav-link"
                     >Categories
                     <i class="fa fa-angle-down" data-toggle="dropdown"></i>
                   </a>
@@ -67,13 +69,13 @@
 
           <div class="col-2 order-xl-1 order-0">
             <a href="index.html" class="nav-logo">
-              <img src="./img/logo.png" alt="" />
+              <!-- <img src="./img/logo.png" alt="" /> -->
             </a>
           </div>
-          <div class="col-5 order-xl-2 order-2">
+          <div class="col-xl-5 col-2 order-xl-2 order-2">
             <div class="nav-btns">
               <!-- Theme change btns -->
-              <!-- <i class="bx bx-moon change-theme" id="theme-button"></i> -->
+              <i class="bx bx-moon change-theme" id="theme-button"></i>
 
               <div class="nav-search" id="search">
                 <i class="bx bx-search"></i>
@@ -108,91 +110,14 @@
       <h2 class="cart__title-center">My Cart</h2>
 
       <div class="cart__container">
-        <article class="cart__card">
-          <div class="cart__box">
-            <img src="./img/pd-1.png" alt="" class="cart__img" />
-          </div>
-
-          <div class="cart__details">
-            <h3 class="cart__title">Jazzmaster</h3>
-            <span class="cart__price">$1050</span>
-
-            <div class="cart__amount">
-              <div class="cart__amount-content">
-                <span class="cart__amount-box">
-                  <i class="bx bx-minus"></i>
-                </span>
-
-                <span class="cart__amount-number">1</span>
-
-                <span class="cart__amount-box">
-                  <i class="bx bx-plus"></i>
-                </span>
-              </div>
-
-              <i class="bx bx-trash-alt cart__amount-trash"></i>
-            </div>
-          </div>
-        </article>
-
-        <article class="cart__card">
-          <div class="cart__box">
-            <img src="./img/pd-2.png" alt="" class="cart__img" />
-          </div>
-
-          <div class="cart__details">
-            <h3 class="cart__title">Rose Gold</h3>
-            <span class="cart__price">$850</span>
-
-            <div class="cart__amount">
-              <div class="cart__amount-content">
-                <span class="cart__amount-box">
-                  <i class="bx bx-minus"></i>
-                </span>
-
-                <span class="cart__amount-number">1</span>
-
-                <span class="cart__amount-box">
-                  <i class="bx bx-plus"></i>
-                </span>
-              </div>
-
-              <i class="bx bx-trash-alt cart__amount-trash"></i>
-            </div>
-          </div>
-        </article>
-
-        <article class="cart__card">
-          <div class="cart__box">
-            <img src="./img/pd-3.png" alt="" class="cart__img" />
-          </div>
-
-          <div class="cart__details">
-            <h3 class="cart__title">Longines Rose</h3>
-            <span class="cart__price">$980</span>
-
-            <div class="cart__amount">
-              <div class="cart__amount-content">
-                <span class="cart__amount-box">
-                  <i class="bx bx-minus"></i>
-                </span>
-
-                <span class="cart__amount-number">1</span>
-
-                <span class="cart__amount-box">
-                  <i class="bx bx-plus"></i>
-                </span>
-              </div>
-
-              <i class="bx bx-trash-alt cart__amount-trash"></i>
-            </div>
-          </div>
-        </article>
+        <!-- cart card -->
       </div>
 
       <div class="cart__prices">
-        <span class="cart__prices-item">3 items</span>
-        <span class="cart__prices-total">$2880</span>
+        <span class="cart__prices-item">Total</span>
+        <span class="cart__prices-total"
+          >$ <span class="cart-total"></span>
+        </span>
       </div>
     </div>
     <!-- MAIN -->
@@ -481,11 +406,125 @@
                 </div>
               </div>
             </div>
+            <!-- INFORMATION -->
             <div class="tab-pane fade" id="info-content" role="tabpanel">
-              INFO
+              <div class="pd-details-info-container">
+                <h4 class="pd-details-info-title">Weight</h4>
+                <p class="pd-details-info-text">40g</p>
+                <h4 class="pd-details-info-title">Dimension</h4>
+                <p class="pd-details-info-text">20mm x 20mm</p>
+
+                <h4 class="pd-details-info-title">Color</h4>
+                <p class="pd-details-info-text">Red, Blue, White</p>
+
+                <h4 class="pd-details-info-title">Size</h4>
+                <p class="pd-details-info-text">6, 7, 8 ,9</p>
+              </div>
             </div>
+            <!-- REVIEW -->
             <div class="tab-pane fade" id="review-content" role="tabpanel">
-              REVIEW
+              <div class="pd-details-review-container row">
+                <div class="col-md-6">
+                  <div class="pd-details-review-left">
+                    <h4 class="pd-details-review-title">
+                      2 Reviews For 18k Rose Gold Diamond Plated Ring
+                    </h4>
+                    <div class="pd-details-review-comment">
+                      <div class="comment-avatar">
+                        <img src="./img/testimonial-1.png" alt="" />
+                      </div>
+                      <div class="comment-content">
+                        <span class="comment-name"
+                          >Kyle Brandow -
+                          <span class="comment-time">March 21, 2022</span></span
+                        >
+                        <p class="comment-text">
+                          Great quality… and best services.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="pd-details-review-comment">
+                      <div class="comment-avatar">
+                        <img src="./img/testimonial-2.png" alt="" />
+                      </div>
+                      <div class="comment-content">
+                        <span class="comment-name"
+                          >John Cena -
+                          <span class="comment-time">April 21, 2022</span></span
+                        >
+                        <p class="comment-text">Good</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="pd-details-review-right">
+                    <h4 class="pd-details-review-title">Add a review</h4>
+                    <form action="" class="comment-form">
+                      <p class="comment-note">
+                        Your email address will not be published. Required
+                        fields are marked <span class="required">*</span>
+                      </p>
+                      <div class="comment-form-rating">
+                        <p>Your rating <span class="required">*</span></p>
+                        <!-- <ul class="comment-rating">
+                          <li class="star-1"><a href="#"></a></li>
+                          <li class="star-2"><a href="#"></a></li>
+                          <li class="star-3"><a href="#"></a></li>
+                          <li><a href="#" class="star-4"></a></li>
+                          <li><a href="#" class="star-5"></a></li>
+                        </ul> -->
+                        <div class="comment-rating">
+                          <input type="radio" name="comment" id="" />
+                          <input type="radio" name="comment" id="" />
+                          <input type="radio" name="comment" id="" />
+                          <input type="radio" name="comment" id="" />
+                          <input type="radio" name="comment" id="" />
+                        </div>
+                      </div>
+                      <div class="comment-form-comment">
+                        <p>Your review <span class="required">*</span></p>
+                        <textarea
+                          id="comment"
+                          name="comment"
+                          cols="45"
+                          rows="8"
+                          required=""
+                        ></textarea>
+                      </div>
+
+                      <div class="comment-form-author">
+                        <p>Name <span class="required">*</span></p>
+                        <input type="text" value size="30" />
+                      </div>
+                      <div class="comment-form-email">
+                        <p>Email <span class="required">*</span></p>
+                        <input type="text" value size="30" />
+                      </div>
+                      <div class="comment-form-cookies-consent">
+                        <label class="comment-form-checkbox"
+                          >Save my name, email, and website in this browser for
+                          the next time I comment.
+                          <input
+                            type="checkbox"
+                            class="size-input"
+                            checked="checked"
+                          />
+                          <span class="checkmark"></span>
+                        </label>
+                        <!-- <p>
+                          Save my name, email, and website in this browser for
+                          the next time I comment.
+                        </p> -->
+                      </div>
+
+                      <div class="comment-form-submit button black-btn">
+                        submit
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -988,9 +1027,7 @@
       </div>
       <div class="container-fluid footer-bottom">
         <div class="container">
-          <p class="footer-copyright">
-            © 2023 Goldish - WordPress Theme by Webdigify
-          </p>
+          <p class="footer-copyright">© 2023 Goldish</p>
         </div>
       </div>
     </footer>
@@ -1008,6 +1045,7 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="./js/main.js"></script>
+    <script src="./js/products.js"></script>
 
     <script>
       let swiper = new Swiper(".pd-swiper", {

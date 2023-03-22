@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/logo-thumb.png" type="image/x-icon" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -27,23 +28,23 @@
         </div>
 
         <div class="row align-items-center header-content">
-          <div class="col-5 order-xl-0 order-1">
+          <div class="col-xl-5 col-8 order-xl-0 order-1">
             <nav class="nav-menu">
               <ul class="nav-list">
                 <li class="nav-item">
                   <a href="index.html" class="nav-link">Home </a>
                 </li>
                 <li class="nav-item">
-                  <a href="#featured" class="nav-link">Featured</a>
+                  <a href="product-ring.html" class="nav-link">Products</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#products" class="nav-link">Products</a>
+                  <a href="about-us.html" class="nav-link">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#new" class="nav-link">New</a>
+                  <a href="contact.html" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#cate" class="nav-link"
+                  <a href="category.html" class="nav-link"
                     >Categories
                     <i class="fa fa-angle-down" data-toggle="dropdown"></i>
                   </a>
@@ -70,13 +71,13 @@
 
           <div class="col-2 order-xl-1 order-0">
             <a href="index.html" class="nav-logo">
-              <img src="./img/logo.png" alt="" />
+              <!-- <img src="./img/logo.png" alt="" /> -->
             </a>
           </div>
-          <div class="col-5 order-xl-2 order-2">
+          <div class="col-xl-5 col-2 order-xl-2 order-2">
             <div class="nav-btns">
               <!-- Theme change btns -->
-              <!-- <i class="bx bx-moon change-theme" id="theme-button"></i> -->
+              <i class="bx bx-moon change-theme" id="theme-button"></i>
 
               <div class="nav-search" id="search">
                 <i class="bx bx-search"></i>
@@ -837,7 +838,7 @@
                 <h1 class="testimonial-title">
                   What our clients say about us?
                 </h1>
-                <a href="#" class="button testimonial-button">About us</a>
+                <a href="#" class="button black-btn">About us</a>
               </div>
             </div>
 
@@ -1111,9 +1112,7 @@
       </div>
       <div class="container-fluid footer-bottom">
         <div class="container">
-          <p class="footer-copyright">
-            © 2023 Goldish - WordPress Theme by Webdigify
-          </p>
+          <p class="footer-copyright">© 2023 Goldish</p>
         </div>
       </div>
     </footer>
@@ -1129,6 +1128,23 @@
     <!--=============== SWIPER JS ===============-->
     <script src="./js/swiper-bundle.min.js"></script>
 
+    <!--=============== SCROLL REVEAL ===============-->
+    <script src="./js/scrollreveal.min.js"></script>
+    <script>
+      /*=============== SCROLL REVEAL ANIMATION ===============*/
+      const sr = ScrollReveal({
+        distance: "60px",
+        duration: 2500,
+        delay: 400,
+        //reset: true // Animation Repeat
+      });
+
+      sr.reveal(`.banner-slider`, { origin: "top" });
+      sr.reveal(`.service, .tab-content,.section-title`, { origin: "bottom" });
+      sr.reveal(`.testimonial-description`, { origin: "left" });
+      sr.reveal(`.testimonial-content`, { origin: "right" });
+      sr.reveal(`.blog-content`, { interval: 100 });
+    </script>
     <!--=============== MAIN JS ===============-->
     <script src="./js/main.js"></script>
     <script src="./js/products.js"></script>

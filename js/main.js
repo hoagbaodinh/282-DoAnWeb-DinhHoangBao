@@ -79,23 +79,6 @@ const scrollUp = () => {
 };
 window.addEventListener("scroll", scrollUp);
 
-/*=============== COUNTER ===============*/
-const plus = document.querySelector(".plus");
-const minus = document.querySelector(".minus");
-const number = document.querySelector(".quantity-input");
-
-let value = number.value;
-
-plus.addEventListener("click", () => {
-  value++;
-  number.setAttribute("value", value);
-});
-
-minus.addEventListener("click", () => {
-  if (value > 1) value--;
-  number.setAttribute("value", value);
-});
-
 /*=============== COLOR PICKED ===============*/
 const colorBtns = document.querySelectorAll(".pd-details-option-color");
 
@@ -110,4 +93,99 @@ colorBtns.forEach((color) => {
   });
 });
 
-/*=============== RENDER PRODUCT ===============*/
+/*=============== COUNTER ===============*/
+const plus = document.querySelector(".plus");
+const minus = document.querySelector(".minus");
+const number = document.querySelector(".quantity-input");
+
+if (plus && minus && number) {
+  let value = number.value;
+  plus.addEventListener("click", () => {
+    value++;
+    number.setAttribute("value", value);
+  });
+
+  minus.addEventListener("click", () => {
+    if (value > 1) value--;
+    number.setAttribute("value", value);
+  });
+}
+/*=============== ABOUT US COUNTER ===============*/
+const dataNumbers = document.querySelectorAll(".achievement-data-number");
+const interval = 5000;
+
+if (dataNumbers) {
+  dataNumbers.forEach((number) => {
+    let startValue = 0;
+    let endValue = parseInt(number.getAttribute("data-val"));
+    let duration = Math.floor(interval / endValue);
+    let counter = setInterval(() => {
+      startValue += 1;
+      number.textContent = startValue;
+      if (startValue == endValue) {
+        clearInterval(counter);
+      }
+    }, duration);
+  });
+}
+/*=============== SHOW SIDEBAR ===============*/
+const sidebarBtn = document.querySelector(".sidebar-btn");
+const sidebar = document.querySelector(".cate-sidebar");
+const closeSidebarBtn = document.querySelector(".sidebar-close-btn");
+if (sidebarBtn) {
+  sidebarBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("show-sidebar");
+  });
+}
+
+if (closeSidebarBtn) {
+  closeSidebarBtn.addEventListener("click", () => {
+    sidebar.classList.remove("show-sidebar");
+  });
+}
+/*=============== DARK LIGHT THEME ===============*/
+const themeButton = document.getElementById("theme-button");
+const logo = document.querySelector(".nav-logo");
+const darkTheme = "dark-theme";
+const iconTheme = "bx-sun";
+const logoTheme = "nav-logo-invert";
+
+//Check if user already choose theme or not
+const selectedTheme = localStorage.getItem("selected-theme");
+const selectedIcon = localStorage.getItem("selected-icon");
+const selectedLogo = localStorage.getItem("selected-logo");
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+// const getCurrentTheme = () =>{
+//   if(document.body.classList.contains(darkTheme)){
+//     return 'dark'
+//   }else return 'light'
+// }
+
+const getCurrentTheme = () =>
+  document.body.classList.contains(darkTheme) ? "dark" : "light";
+
+const getCurrentIcon = () =>
+  themeButton.classList.contains(iconTheme) ? "bx bx-moon" : "bx bx-sun";
+const getCurrentLogo = () =>
+  logo.classList.contains(logoTheme) ? "nav-logo" : "nav-logo-invert";
+
+if (selectedTheme) {
+  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+    darkTheme
+  );
+  themeButton.classList[selectedIcon === "bx bx-moon" ? "add" : "remove"](
+    iconTheme
+  );
+  logo.classList[selectedLogo === "nav-logo" ? "add" : "remove"](logoTheme);
+}
+
+themeButton.addEventListener("click", () => {
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
+  logo.classList.toggle(logoTheme);
+
+  localStorage.setItem("selected-theme", getCurrentTheme());
+  localStorage.setItem("selected-icon", getCurrentIcon());
+  localStorage.setItem("selected-logo", getCurrentLogo());
+});
