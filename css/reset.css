@@ -90,7 +90,7 @@ button {
   outline: none;
   border: none;
 }
-html {
+body {
   scroll-behavior: smooth;
 }
 

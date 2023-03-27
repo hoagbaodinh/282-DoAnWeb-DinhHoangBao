@@ -2,67 +2,67 @@
 const products = [
   {
     id: "1",
-    title: "18k Rose Gold Diamond Plated Ring",
-    cate: "ring",
+    title: "Her The KRAFT",
+    cate: "her",
     image: "./img/pd-1.png",
     imageHover: "./img/pd-hover-1.png",
-    price: 599.99,
+    price: 380000,
   },
   {
     id: "2",
-    title: "The Loving Heart Pendant",
-    cate: "necklace",
+    title: "Him The KRAFT",
+    cate: "him",
     image: "./img/pd-2.png",
     imageHover: "./img/pd-hover-2.png",
-    price: 609.99,
+    price: 320000,
   },
   {
     id: "3",
-    title: "Dangler Brass Hoop Earring",
-    cate: "earring",
+    title: "Santa the KRAFT",
+    cate: "other",
     image: "./img/pd-3.png",
     imageHover: "./img/pd-hover-3.png",
-    price: 429.99,
+    price: 320000,
   },
   {
     id: "4",
-    title: "The Mariatte Hoop Earrings",
-    cate: "earring",
+    title: "Say cheese the KRAFT",
+    cate: "other",
     image: "./img/pd-4.png",
     imageHover: "./img/pd-hover-4.png",
-    price: 299.99,
+    price: 145000,
   },
   {
     id: "5",
-    title: "Melorra The Blind Fold Diamond Earrings",
-    cate: "earring",
+    title: "Apology The KRAFT",
+    cate: "other",
     image: "./img/pd-5.png",
     imageHover: "./img/pd-hover-5.png",
-    price: 199.99,
+    price: 125000,
   },
   {
     id: "6",
-    title: "Amethyst Ring For Girls and Women",
-    cate: "ring",
+    title: "Daily Stuff The KRAFT",
+    cate: "other",
     image: "./img/pd-6.png",
     imageHover: "./img/pd-hover-6.png",
-    price: 379.99,
+    price: 185000,
   },
   {
     id: "7",
-    title: "18k Diamond Rose Gold ring",
-    cate: "earring",
+    title: " Him The KRAFT ( Black Vibe)",
+    cate: "him",
     image: "./img/pd-7.png",
     imageHover: "./img/pd-hover-7.png",
-    price: 129.99,
+    price: 235000,
   },
   {
     id: "8",
-    title: "Drop Earrings for Women",
-    cate: "earring",
+    title: "Valentine The KRAFT",
+    cate: "her",
     image: "./img/pd-8.png",
     imageHover: "./img/pd-hover-8.png",
-    price: 589.99,
+    price: 180000,
   },
 ];
 const cartBtn = document.querySelector(".nav-shop");
@@ -280,6 +280,7 @@ class UI {
     if (productsDOM) {
       let result = "";
       products.forEach((product) => {
+        product.price = product.price.toLocaleString("en-US");
         result += `
         <div class="col-lg-3 col-sm-6 col-12">
         <div class="pd-item">
@@ -296,7 +297,7 @@ class UI {
             </h4>
           </a>
   
-          <p class="pd-price">$${product.price}</p>
+          <p class="pd-price">${product.price}đ</p>
           <div class="pd-hover">
             <a href="product-ring.html">
               <img
@@ -347,8 +348,10 @@ class UI {
   displaySidebarProduct(products) {
     if (document.querySelector(".sidebar-pd-list")) {
       const sidebarProductDOMs = document.querySelector(".sidebar-pd-list");
+
       let result = "";
       products.forEach((product) => {
+        product.price = product.price.toLocaleString("en-US");
         result += `
         <div class="swiper-slide sidebar-pd-item">
           <img src=${product.image} alt="" />
@@ -369,6 +372,7 @@ class UI {
       );
       let result = "";
       products.forEach((product) => {
+        product.price = product.price.toLocaleString("en-US");
         result += `
         <div class="col-12">
         <div class="list-view-pd-item row">
@@ -449,10 +453,20 @@ class UI {
     if (cateDOM) {
       cateDOM.innerHTML = buttons
         .map((cate) => {
+          let count = 0;
+          for (let i = 0; i < products.length; i++) {
+            if (products[i].cate === cate) {
+              count++;
+            }
+            if (cate === "all") {
+              count = products.length;
+            }
+          }
+
           return `
         <li>
           <button class="cate-sidebar-item-link" data-id="${cate}">
-            ${cate} 
+            ${cate} (${count})
           </button>
         </li>
         `;
@@ -508,10 +522,11 @@ class UI {
       let tempTotal = 0;
       let itemsTotal = 0;
       cart.map((item) => {
-        tempTotal += item.price * item.amount;
+        let price = parseInt(item.price, 10) * 1000;
+        tempTotal += price * item.amount;
         itemsTotal += item.amount;
       });
-      cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
+      cartTotal.innerText = tempTotal.toLocaleString("en-US");
       cartItems.innerText = itemsTotal;
     }
   }
@@ -519,6 +534,7 @@ class UI {
   addCartItem(item) {
     const div = document.createElement("div");
     div.classList.add("cart__card");
+    item.price = item.price.toLocaleString("en-US");
     div.innerHTML = `
     <div class="cart__box">
     <img src=${item.image} alt="" class="cart__img" />
@@ -526,7 +542,7 @@ class UI {
 
     <div class="cart__details">
     <h3 class="cart__title">${item.title}</h3>
-    <span class="cart__price">$${item.price}</span>
+    <span class="cart__price">${item.price}đ </span>
 
     <div class="cart__amount">
       <div class="cart__amount-content">

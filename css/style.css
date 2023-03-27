@@ -268,6 +268,9 @@ nav .nav-item:hover > .dropdown-menu {
   top: 23px;
   right: 20px;
 }
+.search-button i {
+  line-height: initial;
+}
 .nav-shop {
   position: relative;
   cursor: pointer;
@@ -438,6 +441,7 @@ nav .nav-item:hover > .dropdown-menu {
   color: var(--container-color-alt);
   transition: 0.3s;
   padding-bottom: 20px;
+  text-align: initial;
 }
 
 .caption-subtitle {
@@ -548,7 +552,7 @@ nav .nav-item:hover > .dropdown-menu {
 }
 .pd-tag {
   top: 14px;
-  left: 14px;
+  right: 14px;
 
   font-size: 12px;
   text-transform: uppercase;
